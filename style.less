@@ -10,7 +10,7 @@
 
 // Basic Colors
 @main-bg: #fff; 
-@main-color: #666666;
+@main-color: #008044;
 
 // content
 @content-color: #fff;
@@ -21,13 +21,13 @@
 @coluna2: 20%;
 
 // header 
-@header: transparent !Important;
+@header: transparent !important;
 @header-link: #666666; 
 @header-text: #666666;
 
 // navegacao
 @nav: #fff;
-@nav-link: #666666 !Important;
+@nav-link: #666666 !important;
 
 // text and link styles
 @main-font: 'Open Sans', sans-serif;
@@ -35,9 +35,8 @@
 @main-text: contrast(@main-bg, #333, #fff);
 @title-font: 'Open Sans', sans-serif;
 @title-color: #000000;
-@main-link: darken(@main-color, 10%);
+@main-link: @main-color;
 @secondary-link: #666666;
-
 
 /******************************************
 
@@ -94,7 +93,7 @@ body {
 	font-family: @main-font;
 	margin: 0;
     background: ;
-    border-top:7px solid #008044;
+    border-top:7px solid @main-color;
    .gradient
 }
 
@@ -135,17 +134,17 @@ dl.portlet a:hover {
 	float: right;
 }
 
-/********** Header **********/
+/********** Top **********/
 
 
 #portal-personaltools {
 	position: absolute;
-	background:#008044;
+	background: @main-color;
     color:#fff;
 }
 
 #portal-personaltools dd {
-	background:#008044;
+	background: @main-color;
 }
 
 #portal-personaltools a,
@@ -154,7 +153,7 @@ dl.portlet a:hover {
 }
 
 
-/* area do topo */
+/* header */
 header {
 	color: @header-text;
 	background: @header;
@@ -202,7 +201,7 @@ header a:visited {
 #portal-searchbox input.searchField {
 	border: 0;
 	padding: 0.5em 0.2em 0.5em 0.2em;
- width: 81%;
+ 	width: 81%;
     background:transparent;
 }
 #portal-searchbox input.searchButton {
@@ -226,21 +225,22 @@ nav {
     border-bottom:1px solid #E6E6E6;}
 
 nav ul {
-background: @nav;
-background:transparent;	
-color: @nav-link;
+	background: @nav;
+	background:transparent;	
+	color: @nav-link;
 }
 
 nav a {
-padding: 1em; 
-text-decoration: none; 
-min-width: 3em; 
-display: inline-block;
+	padding: 1em; 
+	text-decoration: none; 
+	min-width: 3em; 
+	display: inline-block;
 }
 
 nav li a {
-border-left:1px solid #E6E6E6;
-line-height:auto;padding:9px 15px;}
+	border-left:1px solid #E6E6E6;
+	line-height:auto;padding:9px 15px;
+}
 
 nav li:hover {position:relative;}
 nav li:hover > ul.submenu {
@@ -263,21 +263,31 @@ nav .selected ul.submenu .state-published {
     color: @nav-link;
 }
 
-
-
 nav li a {border-left: 1px solid #E6E6E6;}
 nav li:first-child a {border-left: 0;}
 
-
+/* dropdown compatibility */
+.submenu .submenu {
+	display:none !important;
+}
+nav .submenu li a {
+    width: 160px;
+}
+.selected ul.submenu .state-published {
+	color: @main-link !important;
+}
+ul.submenu a.state-published:hover {
+	color: darken(@main-link, 20%) !important;
+}
 /********** Content **********/
 /* breadcrumb */
 #portal-breadcrumbs {
 	font-size: 80%;
 	clear: both;
-	color: #3C3C48;
+	color: lighten(@header-text, 5%);
 }
 #portal-breadcrumbs a, .breadcrumbSeparator {
-	color: #3C3C48;
+	color: lighten(@header-text, 5%);
 }
 .section-front-page #portal-breadcrumbs {
     display: none;
@@ -306,6 +316,13 @@ h2 {
     color: @title-color;
     line-height: 1.2em;
 	margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.15em;
+    line-height: 1.3em;
+    margin-bottom: 0.5em;
 }
 #content .documentDescription, #content #description {
     color: lighten(@main-text, 10%); 
@@ -314,9 +331,34 @@ h2 {
 }
 
 /********** Tiles **********/
+.tile {
+    margin: 0 1em 2em 1em;
+}
 .tile img {
 	max-width: 100%;
 	height: auto;
+}
+.tile-header h1,
+.tile-header h2,
+.tile-header h3,
+.tile-header h4 {
+	color: @main-color;
+}
+.tile-header {
+    border-bottom: 1px solid lighten(@main-color, 8%);
+    font-size: 0.8em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+.tile .description {
+    font-size: 0.9em;
+    color: #777;
+}
+.tile a {
+    color: #222222 !important;
+}
+.collection-item {
+    margin-bottom: 2em;
 }
 
 /* galeria */
@@ -339,6 +381,9 @@ h2 {
 	font: normal 1em/1.4 @text-font;
 	margin: 0;
 	color: @main-text;
+}
+.slideshow ul, .slideshow ul li {
+	list-style:none !important;
 }
 
 /*********** Portlets ***********/
