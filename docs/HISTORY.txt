@@ -1,0 +1,17 @@
+Changelog
+=========
+
+0.1dev (unreleased)
+-------------------
+
+- Plone theme package [macagua]
+
+- Styles update [agnogueira]
+
+- Fix theme name [agnogueira]
+
+- Remove unnecessary folder  [agnogueira]
+
+- Initial layout and styles files [Tamosauskas]
+
+- Initial release
