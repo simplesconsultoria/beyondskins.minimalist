@@ -92,7 +92,7 @@ Credits
 -------
 
 - Thiago Tamosauskas (thiago at simplesconsultoria dot com dot br).
-- Andre Nogueira (andre at simplesconsultoria dot com dot br).
+- Andre Nogueira (agnogueira at gmail dot com).
 
 .. _`Simples Consultoria`: http://www.simplesconsultoria.com.br/
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
