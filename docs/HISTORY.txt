@@ -4,7 +4,9 @@ Changelog
 0.1dev (unreleased)
 -------------------
 
-- Plone theme package [macagua]
+- Added more strings classifiers items for this package [macagua]
+
+- Added Plone theme package structure [macagua]
 
 - Styles update [agnogueira]
 
