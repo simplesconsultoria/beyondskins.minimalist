@@ -30,7 +30,7 @@ Features
 
 - It's an installable Plone Theme package.
 - After installation from Add-ons controlpanel, this theme is enabled automatically.
-- Also it's a simple Diazo package.
+- Also it's a simple Diazo package (Zip file).
 
 
 Installation
