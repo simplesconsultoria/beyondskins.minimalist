@@ -16,6 +16,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="beyondskins.minimalist: Uninstall profile for Plone 4 Diazo Theme"
+      directory="profiles/uninstall"
+      description="Uninstalls the beyondskins.minimalist package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
 
   <include package="plone.resource" file="meta.zcml"/>
