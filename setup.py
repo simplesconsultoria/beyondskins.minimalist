@@ -5,19 +5,32 @@ version = '0.1'
 
 setup(name='beyondskins.minimalist',
       version=version,
-      description="Beyondskins Minimalist",
+      description="Beyondskins Minimalist for Plone/Diazo powered sites",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
-      # http://pypi.python.org/pypi?:action=list_classifiers
+      # https://pypi.org/pypi?:action=list_classifiers
       classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Environment :: Web Environment",
         "Framework :: Plone",
+        "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
+        "Framework :: Plone :: 4.3",
+        "Framework :: Plone :: Theme",
         "Framework :: Zope2",
         "Framework :: Zope3",
+        "Intended Audience :: Developers",
+        "Intended Audience :: End Users/Desktop",
+        "Operating System :: OS Independent",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
+        "Topic :: Internet",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
-      keywords='Plone, Diazo, Theme, Simples Consultoria,',
+      keywords='web zope plone diazo theme beyondskins minimalist cms',
       author='Andre Nogueira',
       author_email='andre@simplesconsultoria.com.br',
       url='https://github.com/simplesconsultoria/beyondskins.minimalist',
