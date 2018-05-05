@@ -22,7 +22,7 @@ Screenshots
 
 Layout of the site when viewed in a computer resolution:
 
-.. image:: https://github.com/plone-ve/beyondskins.minimalist/raw/master/beyondskins/minimalist/static/preview.png
+.. image:: https://github.com/simplesconsultoria/beyondskins.minimalist/raw/master/beyondskins/minimalist/static/preview.png
 
 
 Features
@@ -36,6 +36,7 @@ Features
 Installation
 ============
 
+
 Zip file
 --------
 
@@ -44,20 +45,35 @@ If you are an end user, you might enjoy installation via zip file import.
 1. Download a `zip file <https://github.com/simplesconsultoria/beyondskins.minimalist/raw/master/beyondskins.minimalist.zip>`_.
 2. Import the theme from the Diazo theme control panel.
 
+Enabling the theme
+^^^^^^^^^^^^^^^^^^
+
+Select and enable the theme from the Diazo control panel. That's it!
+
+
 Buildout
 --------
 
-Install ``beyondskins.minimalist`` by adding it to your buildout: ::
+If you are a developer, you might enjoy installing it via buildout.
+
+For install ``beyondskins.minimalist`` package add it to your ``buildout`` section's 
+*eggs* parameter e.g.: ::
 
    [buildout]
-
     ...
-
     eggs =
+        ...
         beyondskins.minimalist
 
 
 and then running ``bin/buildout``.
+
+Or, you can add it as a dependency on your own product ``setup.py`` file: ::
+
+    install_requires=[
+        ...
+        'beyondskins.minimalist',
+    ],
 
 
 Contribute
